@@ -1,0 +1,9 @@
+# short-description: OCTEON III (SFF7000) SD/eMMC image: FAT32 boot + ext4 root
+# long-description: Partition 1 holds vmlinux.64 + DTBs for bootoctlinux.
+#                   Partition 2 is the ext4 root filesystem.
+
+# Boot partition (FAT32) with kernel+dtbs placed by Yocto's IMAGE_BOOT_FILES
+part /boot --source bootimg-partition --ondisk mmcblk0 --fstype=vfat --label boot --active --align 1024 --size 256
+
+# Root filesystem partition (ext4), created from the built rootfs
+part / --source rootfs --ondisk mmcblk0 --fstype=ext4 --label rootfs --align 4096

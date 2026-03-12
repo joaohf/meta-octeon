@@ -1,15 +1,16 @@
 OpenEmbedded BSP layer for Cavium Octeon boards 
 
-Supported Octreon Boards:
+Supported Octeon Boards:
 ========================
 CN78xx
 CN7130-Router-Ref
+Cavium Small Form Factor Reference CN7000 EVB
 
 This layer depends on:
 
 URI: git://git.openembedded.org/openembedded-core
 layers: meta
-branch: jethro 
+branch: scarthgap 
 revision: HEAD
 
 
